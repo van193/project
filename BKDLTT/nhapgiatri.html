@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>Chương trình chuyển đổi giá trị</title>
+    <body>
+        <input type="number" placeholder="Độ C" id="c"/>
+        <button onclick="chuyenDoi()">Nhập</button>
+        <p id="result"></p>
+        <script>
+            function chuyenDoi() {
+                let Celsius = +document.getElementById("c").value;
+                let Fahrenheit = (Celsius * (9 / 5)) / 32;
+                document.getElementById("result").innerHTML = "Độ F là: " + Fahrenheit;
+            }
+        </script>
+    </body>
+</head>
+</html>

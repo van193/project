@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <title>Chương trình nhập và tính điểm trung bình</title>
+    <body>
+        <script>
+            inputPhysics = prompt("Nhập điểm Vật Lý");
+            inputChemistry = prompt("Nhập điểm Hóa Học");
+            inputBiology = prompt("Nhập điểm Sinh Học");
+            let physics = parseInt(inputPhysics);
+            let chemistry = parseInt(inputChemistry);
+            let biology = parseInt(inputBiology);
+            let totalavagre = (physics + chemistry + biology) / 3;
+            document.write("Tổng điểm trung bình là: " + totalavagre);
+        </script>
+    </body>
+</head>
+</html>
