@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng tính toán</title>
+</head>
+<body>
+    <input type="number" id="numb1" placeholder="Nhập số">
+    <input type="number" id="numb2" placeholder="Nhập số">
+    <button onmouseout="Add()">Cộng</button>
+    <button onclick="Sub()">Trừ</button>
+    <h3>Kết quả:</h3>
+    <div id="result"></div>
+    <script>
+        function Add() {
+            let number1 = document.getElementById("numb1").value;
+            let number2 = document.getElementById("numb2").value;
+            let result = Number(number1) + Number(number2);
+            document.getElementById("result").innerHTML = result;
+        }
+
+        function Sub() {
+            let number1 = document.getElementById("numb1").value;
+            let number2 = document.getElementById("numb2").value;
+            let result = Number(number1) - Number(number2);
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
