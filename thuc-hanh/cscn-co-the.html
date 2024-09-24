@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Title</title>
+</head>
+<body>
+    <h2>Tính chỉ số cân nặng</h2>
+    <div class="container">
+        <h2>Tính Chỉ Số BMI</h2>
+        <div class="input-group">
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" placeholder="Enter your weight">
+        </div>
+        <div class="input-group">
+            <label for="height">Height (m):</label>
+            <input type="number" id="height" step="0.01" placeholder="Enter your height">
+        </div>
+        <button onclick="calculateBMI()">Calculate BMI</button>
+
+        <div class="result" id="result"></div>
+    </div>
+    <script>
+        function calculateBMI() {
+            var weight = document.getElementById("weight").value;
+            var height = document.getElementById("height").value;
+            var bmi = weight / (height ** 2);
+            if (bmi < 18) {
+                result = "Underweight";
+            }
+            else if (bmi < 25.0) {
+                result = "Normal";
+            }
+            else if (bmi < 30.0) {
+                result = "Overweight";
+            }
+            else {
+                result = "Obese";
+            }
+            var result = "Your BMI is: " + bmi + ". You're: " + result;
+            document.getElementById("result").innerHTML = result;
+}
+    </script>
+</body>
+</html>
