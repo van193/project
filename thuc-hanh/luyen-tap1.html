@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <script>
+        function checkDivisible() {
+            var a = parseInt(document.getElementById("a").value);
+            var b = parseInt(document.getElementById("b").value);
+
+            if (b === 0) {
+                document.getElementById("result1").innerHTML = "b không được bằng 0!";
+            } else if (a % b === 0) {
+                document.getElementById("result1").innerHTML = a + " chia hết cho " + b;
+            } else {
+                document.getElementById("result1").innerHTML = a + " không chia hết cho " + b;
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>Bài 1: Kiểm tra chia hết</h2>
+<label for="a">Nhập số a:</label>
+<input type="number" id="a" name="a">
+<br><br>
+<label for="b">Nhập số b:</label>
+<input type="number" id="b" name="b">
+<br><br>
+<button onclick="checkDivisible()">Kiểm tra</button>
+<p id="result1"></p>
+</body> -->
+
+
+<!--    <script>
+        function checkEligibility() {
+            var age = parseInt(document.getElementById("age").value);
+
+            if (age < 0) {
+                document.getElementById("result2").innerHTML = "Tuổi không hợp lệ!";
+            } else if (age >= 15) {
+                document.getElementById("result2").innerHTML = "Bạn đủ điều kiện vào lớp 10.";
+            } else {
+                document.getElementById("result2").innerHTML = "Bạn chưa đủ điều kiện vào lớp 10.";
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>Bài 2: Kiểm tra điều kiện vào lớp 10</h2>
+<label for="age">Nhập tuổi của bạn:</label>
+<input type="number" id="age" name="age">
+<br><br>
+<button onclick="checkEligibility()">Kiểm tra</button>
+<p id="result2"></p>
+</body> -->
+
+
+<!--    <script>
+        function checkNumber() {
+            var number = parseInt(document.getElementById("number").value);
+
+            if (number > 0) {
+                document.getElementById("result3").innerHTML = number + " lớn hơn 0.";
+            } else if (number < 0) {
+                document.getElementById("result3").innerHTML = number + " nhỏ hơn 0.";
+            } else {
+                document.getElementById("result3").innerHTML = + number + " bằng 0.";
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>Bài 3: Kiểm tra số lớn hơn hay nhỏ hơn 0</h2>
+<label for="number">Nhập số nguyên:</label>
+<input type="number" id="number" name="number">
+<br><br>
+<button onclick="checkNumber()">Kiểm tra</button>
+<p id="result3"></p>
+</body> -->
+
+
+<!--    <script>
+        function findMax() {
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+            var num3 = parseInt(document.getElementById("num3").value);
+
+            var max = num1;
+
+            if (num2 > max) {
+                max = num2;
+            }
+
+            if (num3 > max) {
+                max = num3;
+            }
+
+            document.getElementById("result4").innerHTML = "Giá trị lớn nhất là: " + max;
+        }
+    </script>
+</head>
+<body>
+<h2>Bài 4: Tìm giá trị lớn nhất của ba số nguyên</h2>
+<label for="num1">Nhập số thứ nhất:</label>
+<input type="number" id="num1" name="num1">
+<br><br>
+<label for="num2">Nhập số thứ hai:</label>
+<input type="number" id="num2" name="num2">
+<br><br>
+<label for="num3">Nhập số thứ ba:</label>
+<input type="number" id="num3" name="num3">
+<br><br>
+<button onclick="findMax()">Tìm giá trị lớn nhất</button>
+<p id="result4"></p>
+</body> -->
+
+
+<!--    <script>
+        function gradeStudent() {
+            var exam1 = parseFloat(document.getElementById("exam1").value);
+            var midTerm = parseFloat(document.getElementById("midTerm").value);
+            var finalExam = parseFloat(document.getElementById("finalExam").value);
+
+            var average = (exam1 + midTerm + finalExam) / 3;
+
+            var grade;
+            if (average >= 8.5) {
+                grade = "Giỏi";
+            } else if (average >= 7) {
+                grade = "Khá";
+            } else if (average >= 5) {
+                grade = "Trung bình";
+            } else {
+                grade = "Yếu";
+            }
+
+            document.getElementById("result5").innerHTML = "Điểm trung bình: " + average.toFixed(2) + "<br> Xếp hạng: " + grade;
+        }
+    </script>
+</head>
+<body>
+<h2>Bài 5: Xếp hạng học lực học sinh</h2>
+<label for="exam1">Điểm bài kiểm tra:</label>
+<input type="number" id="exam1" name="exam1" step="0.01" min="0" max="10">
+<br><br>
+<label for="midTerm">Điểm thi giữa kỳ:</label>
+<input type="number" id="midTerm" name="midTerm" step="0.01" min="0" max="10">
+<br><br>
+<label for="finalExam">Điểm thi cuối kỳ:</label>
+<input type="number" id="finalExam" name="finalExam" step="0.01" min="0" max="10">
+<br><br>
+<button onclick="gradeStudent()">Xếp hạng</button>
+<p id="result5"></p>
+</body> -->
+
+
+<!--    <script>
+        function calculateCommission() {
+            var sales = parseFloat(document.getElementById("sales").value);
+            var commissionRate;
+
+            if (sales < 10000000) {
+                commissionRate = 0.05;
+            } else if (sales <= 20000000) {
+                commissionRate = 0.07;
+            } else {
+                commissionRate = 0.10;
+            }
+
+            var commission = sales * commissionRate;
+            document.getElementById("result6").innerHTML = "Hoa hồng nhận được là: " + commission.toLocaleString('vi-VN', {style: 'currency', currency: 'VND'});
+        }
+    </script>
+</head>
+<body>
+<h2>Bài 6: Tính hoa hồng theo doanh số bán hàng</h2>
+<label for="sales">Nhập doanh số bán hàng (VNĐ):</label>
+<input type="number" id="sales" name="sales" step="1000" min="0">
+<br><br>
+<button onclick="calculateCommission()">Tính hoa hồng</button>
+<p id="result6"></p>
+</body> -->
+
+
+    <script>
+        function calculatePhoneBill() {
+            var minutes = parseInt(document.getElementById("minutes").value);
+            var bill = 0;
+
+            if (minutes <= 100) {
+                bill = minutes * 500;
+            } else if (minutes <= 200) {
+                bill = (100 * 500) + (minutes - 100) * 400;
+            } else {
+                bill = (100 * 500) + (100 * 400) + (minutes - 200) * 300;
+            }
+
+            document.getElementById("result7").innerHTML = "Cước điện thoại của bạn là: " + bill.toLocaleString('vi-VN', {style: 'currency', currency: 'VND'});
+        }
+    </script>
+</head>
+<body>
+<h2>Bài 7: Tính cước điện thoại</h2>
+<label for="minutes">Nhập số phút đã gọi trong tháng:</label>
+<input type="number" id="minutes" name="minutes" min="0">
+<br><br>
+<button onclick="calculatePhoneBill()">Tính cước</button>
+<p id="result7"></p>
+</body>
+</html>
