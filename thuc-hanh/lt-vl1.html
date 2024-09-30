@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charet="utf-8">
+    <title>Title</title>
+</head>
+<body>
+    <!-- <h1>Đếm từ 1 đến 100</h1>
+    <button onclick="dem()">Bắt đầu đếm</button>
+
+    <script>
+        function dem() {
+            for (let i = 1; i <= 100; i++) {
+                console.log(i); // Hiển thị số trong console
+                if (i === 99) {
+                    alert("Đã hoàn thành đến số 99!");
+                }
+            }
+        }
+    </script> -->
+
+
+    <!-- <h1>Bài 2: Kiểm tra nhiệt độ</h1>
+    <button onclick="kiemTraNhietDo()">Nhập nhiệt độ</button>
+    <script>
+        function kiemTraNhietDo() {
+            let nhietDo = prompt("Vui lòng nhập nhiệt độ hiện tại:");
+            nhietDo = parseFloat(nhietDo);
+            while (nhietDo > 100 || nhietDo < 20) {
+                if (nhietDo > 100) {
+                    nhietDo = prompt("Nhiệt độ quá cao. Vui lòng giảm nhiệt độ dưới 100.");
+                } else if (nhietDo < 20) {
+                    nhietDo = prompt("Nhiệt độ quá thấp. Vui lòng tăng nhiệt độ trên 20.");
+                }
+                nhietDo = parseFloat(nhietDo);
+            }
+
+            alert("Nhiệt độ hiện tại đã phù hợp: " + nhietDo + " độ.");
+        }
+    </script> -->
+
+
+<!-- <h1>Bài 3: Hiển thị 20 số đầu tiên trong dãy Fibonacci</h1>
+    <button onclick="hienThiFibonacci()">Hiển thị</button>
+    <div id="fibonacci"></div>
+    <script>
+        function hienThiFibonacci() {
+            let fibonacci = [0, 1];
+            for (let i = 2; i < 20; i++) {
+                fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+            }
+            document.getElementById("fibonacci").innerHTML = "Dãy Fibonacci: " + fibonacci.join(", ");
+        }
+    </script> -->
+
+<!--    <h1>Bài 4: Tìm số đầu tiên trong dãy Fibonacci chia hết cho 5</h1>
+    <button onclick="timSoFibonacci()">Tìm số</button>
+    <div id="ketqua"></div>
+
+    <script>
+        function timSoFibonacci() {
+            let a = 0, b = 1, fib = 0;
+
+            while (true) {
+                fib = a + b;
+                a = b;
+                b = fib;
+
+                if (fib % 5 === 0) {
+                    document.getElementById("ketqua").innerHTML = "Số đầu tiên trong dãy Fibonacci chia hết cho 5 là: " + fib;
+                    break;
+                }
+            }
+        }
+    </script> -->
+
+
+<!--    <h1>Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci</h1>
+    <button onclick="tongFibonacci()">Tính tổng</button>
+    <div id="tongFibonacci"></div>
+    <script>
+        function tongFibonacci() {
+            let fibonacci = [0, 1];
+            let tong = 1;
+            for (let i = 2; i < 20; i++) {
+                fibonacci[i] = fibonacci[i -1] + fibonacci[i -2];
+                tong += fibonacci[i];
+            }
+            document.getElementById("tongFibonacci").innerHTML = "Tổng của 20 số đầu tiên trong dãy Fibonacci là: " + tong;
+        }
+    </script> -->
+
+
+<!--    <h1>Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên</h1>
+    <button onclick="tongChiaHetCho7()">Tính tổng</button>
+    <div id="tongChiaHetCho7"></div>
+
+    <script>
+        function tongChiaHetCho7() {
+            let tong = 0;
+            let dem = 0;
+            let soHienTai = 0;
+            while (dem < 30) {
+                if (soHienTai % 7 === 0 && soHienTai !== 0) {
+                    tong += soHienTai;
+                    dem++;
+                }
+                soHienTai++;
+            }
+            document.getElementById("tongChiaHetCho7").innerHTML = "Tổng của 30 số chia hết cho 7 đầu tiên là: " + tong;
+        }
+    </script> -->
+
+
+<!--    <h1>Bài 7: In ra các số từ 1 đến 100 với FizzBuzz</h1>
+    <button onclick="inFizzBuzz()">In kết quả</button>
+    <div id="fizzbuzz"></div>
+    <script>
+        function inFizzBuzz() {
+            let ketQua = "";
+            for (let i = 1; i <= 100; i++) {
+                if (i % 3 === 0 && i % 5 === 0) {
+                    ketQua += "FizzBuzz<br>";
+                } else if (i % 3 === 0) {
+                    ketQua += "Fizz<br>";
+                } else if (i % 5 === 0) {
+                    ketQua += "Buzz<br>";
+                } else {
+                    ketQua += i + "<br>";
+                }
+            }
+            document.getElementById("fizzbuzz").innerHTML = ketQua;
+        }
+    </script> -->
+
+    <h1>Bài 8: Game đoán số</h1>
+    <button onclick="choiGame()">Chơi</button>
+
+    <script>
+        function choiGame() {
+            let soLanThu = 0;
+            let khoangDuoi = parseInt(prompt("Nhập khoảng dưới:"));
+            let khoangTren = parseInt(prompt("Nhập khoảng trên:"));
+            let soNgauNhien = Math.floor(Math.random() * (khoangTren - khoangDuoi + 1)) + khoangDuoi;
+
+            function doanSo() {
+                if (soLanThu >= 3) {
+                    alert("Bạn đã hết lượt đoán.");
+                    return;
+                }
+
+                let duDoan = parseInt(prompt("Hãy đoán một số trong khoảng từ " + khoangDuoi + " đến " + khoangTren + ":"));
+                soLanThu++;
+
+                if (duDoan === soNgauNhien) {
+                    alert("Chúc mừng. Bạn đã đoán đúng sau " + soLanThu + " lần đoán.");
+                } else if (duDoan > soNgauNhien) {
+                    alert("Số bạn đoán lớn hơn số bí mật. Thử lại nhé.");
+                    doanSo();
+                } else if (duDoan < soNgauNhien) {
+                    alert("Số bạn đoán nhỏ hơn số bí mật. Thử lại nhé.");
+                    doanSo();
+                }
+            }
+
+            doanSo();
+        }
+    </script>
+</body>
+</html>
