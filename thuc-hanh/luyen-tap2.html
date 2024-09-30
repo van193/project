@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -374,4 +375,382 @@
 
 <p id="result"></p>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <script>
+        function convertCtoF() {
+            let celsius = parseFloat(document.getElementById("celsius").value);
+            let fahrenheit = celsius * 9 / 5 + 32;
+
+            if (celsius <= 0) {
+                document.getElementById("result1").innerHTML = "Độ F là: " + fahrenheit.toFixed(2);
+            } else if (celsius <= 25) {
+                document.getElementById("result1").innerHTML = "Độ F là: " + fahrenheit.toFixed(2);
+            } else if (celsius <= 35) {
+                document.getElementById("result1").innerHTML = "Độ F là: " + fahrenheit.toFixed(2);
+            } else {
+                document.getElementById("result1").innerHTML = "Độ F là: " + fahrenheit.toFixed(2);
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>Bài 1: Chuyển đổi độ C sang độ F</h2>
+<label for="celsius">Nhập nhiệt độ (°C):</label>
+<input type="number" id="celsius" name="celsius" step="0.01">
+<br><br>
+<button onclick="convertCtoF()">Chuyển đổi</button>
+<p id="result1"></p>
+</body> -->
+
+
+<!--    <script>
+        function convertMtoFt() {
+            let meters = parseFloat(document.getElementById("meters").value);
+            let feet = meters * 3.2808;
+
+            let classification;
+            switch (true) {
+                case (meters < 0):
+                    classification = "Chiều dài không hợp lệ!";
+                    break;
+                case (meters === 0):
+                    classification = "Không có chiều dài.";
+                    break;
+                case (meters > 0 && meters <= 1):
+                    classification = "Chiều dài ngắn.";
+                    break;
+                case (meters > 1 && meters <= 10):
+                    classification = "Chiều dài trung bình.";
+                    break;
+                default:
+                    classification = "Chiều dài dài.";
+                    break;
+            }
+
+            document.getElementById("result2").innerHTML = "Feet: " + feet.toFixed(2) + " - " + classification;
+        }
+    </script>
+</head>
+<body>
+<h2>Bài 2: Chuyển đổi mét sang feet</h2>
+<label for="meters">Nhập chiều dài (mét):</label>
+<input type="number" id="meters" name="meters" step="0.01">
+<br><br>
+<button onclick="convertMtoFt()">Chuyển đổi</button>
+<p id="result2"></p>
+</body> -->
+
+    
+<!--    <script>
+        function calculateSquareArea() {
+            let a = parseFloat(document.getElementById("sideA").value);
+
+            if (a <= 0) {
+                document.getElementById("result3").innerHTML = "Cạnh phải là số dương lớn hơn 0!";
+            } else {
+                let area = a * a;
+                document.getElementById("result3").innerHTML = "Diện tích hình vuông là: " + area.toFixed(2);
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>Bài 3: Tính diện tích hình vuông</h2>
+<label for="sideA">Nhập cạnh của hình vuông (a):</label>
+<input type="number" id="sideA" name="sideA" step="0.01">
+<br><br>
+<button onclick="calculateSquareArea()">Tính diện tích</button>
+<p id="result3"></p>
+</body> -->
+
+
+<!--    <script>
+        function calculateRectangleArea() {
+            let a = parseFloat(document.getElementById("sideA").value);
+            let b = parseFloat(document.getElementById("sideB").value);
+
+            if (a <= 0 || b <= 0) {
+                document.getElementById("result4").innerHTML = "Cả hai cạnh phải là số dương lớn hơn 0!";
+            } else {
+                let area = a * b;
+                document.getElementById("result4").innerHTML = "Diện tích hình chữ nhật là: " + area.toFixed(2);
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>Bài 4: Tính diện tích hình chữ nhật</h2>
+<label for="sideA">Nhập chiều dài (a):</label>
+<input type="number" id="sideA" name="sideA" step="0.01">
+<br><br>
+<label for="sideB">Nhập chiều rộng (b):</label>
+<input type="number" id="sideB" name="sideB" step="0.01">
+<br><br>
+<button onclick="calculateRectangleArea()">Tính diện tích</button>
+<p id="result4"></p> -->
+
+
+<!--    <script>
+        function calculateTriangleArea() {
+            let a = parseFloat(document.getElementById("sideA").value);
+            let b = parseFloat(document.getElementById("sideB").value);
+
+            if (a <= 0 || b <= 0) {
+                document.getElementById("result5").innerHTML = "Cả hai cạnh phải là số dương lớn hơn 0!";
+            } else {
+                let area = (a * b) / 2;
+                document.getElementById("result5").innerHTML = "Diện tích tam giác vuông là: " + area.toFixed(2);
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>Bài 5: Tính diện tích tam giác vuông</h2>
+<label for="sideA">Nhập cạnh kề thứ nhất (a):</label>
+<input type="number" id="sideA" name="sideA" step="0.01">
+<br><br>
+<label for="sideB">Nhập cạnh kề thứ hai (b):</label>
+<input type="number" id="sideB" name="sideB" step="0.01">
+<br><br>
+<button onclick="calculateTriangleArea()">Tính diện tích</button>
+<p id="result5"></p>
+</body> -->
+
+
+<!--    <script>
+        function solveLinearEquation() {
+            let a = parseFloat(document.getElementById("a").value);
+            let b = parseFloat(document.getElementById("b").value);
+
+            if (a === 0) {
+                if (b === 0) {
+                    document.getElementById("result6").innerHTML = "Phương trình có vô số nghiệm.";
+                } else {
+                    document.getElementById("result6").innerHTML = "Phương trình vô nghiệm.";
+                }
+            } else {
+                let x = -b / a;
+                document.getElementById("result6").innerHTML = "Nghiệm của phương trình là: x = " + x.toFixed(2);
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>Bài 6: Giải phương trình bậc 1 (ax + b = 0)</h2>
+<label for="a">Nhập hệ số a:</label>
+<input type="number" id="a" name="a" step="0.01">
+<br><br>
+<label for="b">Nhập hệ số b:</label>
+<input type="number" id="b" name="b" step="0.01">
+<br><br>
+<button onclick="solveLinearEquation()">Giải phương trình</button>
+<p id="result6"></p>
+</body> -->
+
+
+<!--    <script>
+        function solveQuadraticEquation() {
+            let a = parseFloat(document.getElementById("a").value);
+            let b = parseFloat(document.getElementById("b").value);
+            let c = parseFloat(document.getElementById("c").value);
+
+            if (a === 0) {
+                if (b === 0) {
+                    if (c === 0) {
+                        document.getElementById("result7").innerHTML = "Phương trình có vô số nghiệm.";
+                    } else {
+                        document.getElementById("result7").innerHTML = "Phương trình vô nghiệm.";
+                    }
+                } else {
+                    let x = -c / b;
+                    document.getElementById("result7").innerHTML = "Nghiệm của phương trình bậc 1 là: x = " + x.toFixed(2);
+                }
+            } else {
+                let delta = b * b - 4 * a * c;
+
+                if (delta < 0) {
+                    document.getElementById("result7").innerHTML = "Phương trình vô nghiệm.";
+                } else if (delta === 0) {
+                    let x = -b / (2 * a);
+                    document.getElementById("result7").innerHTML = "Phương trình có nghiệm kép: x = " + x.toFixed(2);
+                } else {
+                    let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                    let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                    document.getElementById("result7").innerHTML = "Phương trình có 2 nghiệm phân biệt:<br>x1 = " + x1.toFixed(2) + "<br>x2 = " + x2.toFixed(2);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>Bài 7: Giải phương trình bậc 2 (ax² + bx + c = 0)</h2>
+<label for="a">Nhập hệ số a:</label>
+<input type="number" id="a" name="a" step="0.01">
+<br><br>
+<label for="b">Nhập hệ số b:</label>
+<input type="number" id="b" name="b" step="0.01">
+<br><br>
+<label for="c">Nhập hệ số c:</label>
+<input type="number" id="c" name="c" step="0.01">
+<br><br>
+<button onclick="solveQuadraticEquation()">Giải phương trình</button>
+<p id="result7"></p>
+</body> -->
+
+
+<!--    <script>
+        function checkAge() {
+            let age = parseInt(document.getElementById("age").value);
+
+            if (isNaN(age)) {
+                document.getElementById("result8").innerHTML = "Vui lòng nhập một số nguyên.";
+            } else if (age > 0 && age < 120) {
+                document.getElementById("result8").innerHTML = "Tuổi hợp lệ.";
+            } else {
+                document.getElementById("result8").innerHTML = "Tuổi không hợp lệ.";
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>Bài 8: Kiểm tra xem một số có phải là tuổi của một người không</h2>
+<label for="age">Nhập số:</label>
+<input type="number" id="age" name="age" step="1">
+<br><br>
+<button onclick="checkAge()">Kiểm tra</button>
+<p id="result8"></p>
+</body> -->
+
+
+<!--    <script>
+        function checkTriangle() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var c = parseFloat(document.getElementById("c").value);
+
+            if (a > 0 && b > 0 && c > 0) {
+                if (a + b > c && b + c > a && a + c > b) {
+                    document.getElementById("result").innerHTML = "a, b, c là các cạnh của một tam giác.";
+                } else {
+                    document.getElementById("result").innerHTML = "a, b, c không phải là các cạnh của một tam giác.";
+                }
+            } else {
+                document.getElementById("result").innerHTML = "a, b, c phải lớn hơn 0.";
+            }
+        }
+    </script>
+</head>
+<body>
+<h2>Bài 9: Kiểm tra cạnh của tam giác</h2>
+<label for="a">Nhập cạnh a:</label>
+<input type="number" id="a" step="0.01"><br><br>
+
+<label for="b">Nhập cạnh b:</label>
+<input type="number" id="b" step="0.01"><br><br>
+
+<label for="c">Nhập cạnh c:</label>
+<input type="number" id="c" step="0.01"><br><br>
+
+<button onclick="checkTriangle()">Kiểm tra</button>
+
+<p id="result"></p>
+</body> -->
+
+
+<!--    <script>
+        function calculateElectricityBill() {
+            var kWh = parseFloat(document.getElementById("kWh").value);
+            var total = 0;
+
+            if (kWh <= 50) {
+                total = kWh * 1678;
+            } else if (kWh <= 100) {
+                total = 50 * 1678 + (kWh - 50) * 1734;
+            } else {
+                total = 50 * 1678 + 50 * 1734 + (kWh - 100) * 2014;
+            }
+
+            document.getElementById("bill").innerHTML = "Tổng số tiền điện là: " + total.toLocaleString('vi-VN') + " đồng";
+        }
+    </script>
+</head>
+<body>
+<h2>Bài 10: Tính giá điện</h2>
+<label for="kWh">Nhập số điện (kWh):</label>
+<input type="number" id="kWh" step="0.01"><br><br>
+
+<button onclick="calculateElectricityBill()">Tính</button>
+
+<p id="bill"></p>
+</body> -->
+
+
+<!--    <script>
+        function calculateTax() {
+            var income = parseFloat(document.getElementById("income").value);
+            var tax = 0;
+
+            if (income <= 5000000) {
+                tax = income * 0.05;
+            } else if (income <= 10000000) {
+                tax = 5000000 * 0.05 + (income - 5000000) * 0.1;
+            } else if (income <= 18000000) {
+                tax = 5000000 * 0.05 + 5000000 * 0.1 + (income - 10000000) * 0.15;
+            } else if (income <= 32000000) {
+                tax = 5000000 * 0.05 + 5000000 * 0.1 + 8000000 * 0.15 + (income - 18000000) * 0.2;
+            } else if (income <= 52000000) {
+                tax = 5000000 * 0.05 + 5000000 * 0.1 + 8000000 * 0.15 + 14000000 * 0.2 + (income - 32000000) * 0.25;
+            } else if (income <= 80000000) {
+                tax = 5000000 * 0.05 + 5000000 * 0.1 + 8000000 * 0.15 + 14000000 * 0.2 + 20000000 * 0.25 + (income - 52000000) * 0.3;
+            } else {
+                tax = 5000000 * 0.05 + 5000000 * 0.1 + 8000000 * 0.15 + 14000000 * 0.2 + 20000000 * 0.25 + 28000000 * 0.3 + (income - 80000000) * 0.35;
+            }
+
+            document.getElementById("result").innerHTML = "Số thuế TNCN phải nộp là: " + tax.toLocaleString('vi-VN') + " đồng";
+        }
+    </script>
+</head>
+<body>
+<h2>Bài 11: Tính thuế thu nhập cá nhân</h2>
+<label for="income">Nhập thu nhập sau giảm trừ gia cảnh (VND):</label>
+<input type="number" id="income" step="1000"><br><br>
+
+<button onclick="calculateTax()">Tính thuế</button>
+
+<p id="result"></p>
+</body> -->
+
+
+    <script>
+        function calculateCompoundInterest() {
+            var P = parseFloat(document.getElementById("principal").value);
+            var r = parseFloat(document.getElementById("rate").value) / 100;
+            var t = parseFloat(document.getElementById("months").value);
+
+            var A = P * Math.pow(1 + r, t);
+            document.getElementById("result").innerHTML = "Số tiền sau khi tính lãi là: " + A.toLocaleString('vi-VN') + " đồng";
+        }
+    </script>
+</head>
+<body>
+<h2>Bài 12: Tính lãi ngân hàng (lãi mẹ đẻ lãi con)</h2>
+<label for="principal">Số tiền ban đầu (VND):</label>
+<input type="number" id="principal" step="1000"><br><br>
+
+<label for="rate">Lãi suất hàng tháng (%):</label>
+<input type="number" id="rate" step="0.01"><br><br>
+
+<label for="months">Số tháng cho vay:</label>
+<input type="number" id="months" step="1"><br><br>
+
+<button onclick="calculateCompoundInterest()">Tính lãi</button>
+
+<p id="result"></p>
+</body>
+>>>>>>> c974c0b (first commit)
 </html>

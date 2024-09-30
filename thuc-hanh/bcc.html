@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,4 +25,32 @@
 </script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<h1>Bảng cửu chương</h1>
+<script>
+    let sout, i, j;
+    sout = "<table border='1' width='1000' cellspacing='0' cellpadding='4'>";
+    debugger;
+    for (i = 1; i <= 10; i++) {
+        sout = sout + "<tr>";
+        for (j = 2; j <= 9; j++) {
+            sout = sout + "<td>" + j + "*" + i + "=" + i * j + "</td>";
+        }
+        sout = sout + "</tr>";
+    }
+    sout = sout + "</table>";
+    document.write(sout);
+</script>
+</body>
+
+>>>>>>> c974c0b (first commit)
 </html>
