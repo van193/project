@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    <h1>Bài: In dãy Fibonacci</h1>
+    <input type="number" id="fibInput" placeholder="Nhập số lượng phần tử">
+    <button onclick="inFibonacci()">In dãy Fibonacci</button>
+    <p id="fibResult"></p>
+    <script>
+        function inFibonacci() {
+            let n = document.getElementById('fibInput').value;
+            let result = '';
+            let a = 0, b = 1, nextTerm;
+            for (let i = 1; i <= n; i++) {
+                result += a + ' ';
+                nextTerm = a + b;
+                a = b;
+                b = nextTerm;
+            }
+            document.getElementById('fibResult').innerText = result;
+        }
+    </script> -->
+
+
+<!--    <h1>Bài 2: Tính giai thừa của một số nguyên dương</h1>
+    <input type="number" id="factorialInput" placeholder="Nhập một số nguyên dương">
+    <button onclick="tinhGiaiThua()">Tính giai thừa</button>
+    <p id="factorialResult"></p>
+    <script>
+        function tinhGiaiThua() {
+            let n = document.getElementById('factorialInput').value;
+            let factorial = 1;
+            if (n < 0) {
+                document.getElementById('factorialResult').innerText = "Nhập một số nguyên dương.";
+                return;
+            }
+            while (n > 0) {
+                factorial *= n;
+                n--;
+            }
+            document.getElementById('factorialResult').innerText = "Giai thừa là: " + factorial;
+        }
+    </script> -->
+
+
+<!--    <h1>Bài 3: In tam giác vuông (với các góc vuông nằm ở các vị trí khác nhau)</h1>
+    <input type="number" id="triangleSize" placeholder="Nhập kích thước tam giác">
+    <button onclick="inTamGiacTrenTrai()">Tam giác trên-trái</button>
+    <button onclick="inTamGiacTrenPhai()">Tam giác trên-phải</button>
+    <button onclick="inTamGiacDuoiTrai()">Tam giác dưới-trái</button>
+    <button onclick="inTamGiacDuoiPhai()">Tam giác dưới-phải</button>
+    <pre id="triangleResult"></pre>
+    <script>
+        function inTamGiacTrenTrai() {
+            let n = document.getElementById('triangleSize').value;
+            let result = '';
+            for (let i = n; i > 0; i--) {
+                for (let j = 0; j < i; j++) {
+                    result += '*';
+                }
+                result += '\n';
+            }
+            document.getElementById('triangleResult').innerText = result;
+        }
+        function inTamGiacTrenPhai() {
+            let n = document.getElementById('triangleSize').value;
+            let result = '';
+
+            for (let i = n; i > 0; i--) {
+                for (let j = 0; j < n - i; j++) {
+                    result += ' ';
+                }
+                for (let k = 0; k < i; k++) {
+                    result += '*';
+                }
+                result += '\n';
+            }
+            document.getElementById('triangleResult').innerText = result;
+        }
+        function inTamGiacDuoiTrai() {
+            let n = document.getElementById('triangleSize').value;
+            let result = '';
+
+            for (let i = 1; i <= n; i++) {
+                for (let j = 0; j < i; j++) {
+                    result += '*';
+                }
+                result += '\n';
+            }
+            document.getElementById('triangleResult').innerText = result;
+        }
+        function inTamGiacDuoiPhai() {
+            let n = document.getElementById('triangleSize').value;
+            let result = '';
+            for (let i = 1; i <= n; i++) {
+                for (let j = 0; j < n - i; j++) {
+                    result += ' ';
+                }
+                for (let k = 0; k < i; k++) {
+                    result += '*';
+                }
+                result += '\n';
+            }
+            document.getElementById('triangleResult').innerText = result;
+        }
+    </script> -->
+
+
+<!--    <h1>Bài 4: In hình chữ nhật</h1>
+    <input type="number" id="width" placeholder="Nhập chiều rộng">
+    <input type="number" id="height" placeholder="Nhập chiều cao">
+    <button onclick="inHinhChuNhat()">In Hình Chữ Nhật</button>
+    <pre id="rectangleResult"></pre>
+    <script>
+        function inHinhChuNhat() {
+            let width = document.getElementById('width').value;
+            let height = document.getElementById('height').value;
+            let result = '';
+            for (let i = 0; i < height; i++) {
+                for (let j = 0; j < width; j++) {
+                    result += '*';
+                }
+                result += '\n';
+            }
+            document.getElementById('rectangleResult').innerText = result;
+        }
+    </script> -->
+
+
+<!--    <h1>Bài 5: Chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con)</h1>
+    <label for="initialAmount">Số tiền ban đầu:</label>
+    <input type="number" id="initialAmount" placeholder="Nhập số tiền ban đầu"><br><br>
+    <label for="interestRate">Lãi suất hàng tháng (%):</label>
+    <input type="number" id="interestRate" placeholder="Nhập lãi suất hàng tháng"><br><br>
+    <label for="months">Số tháng cho vay:</label>
+    <input type="number" id="months" placeholder="Nhập số tháng cho vay"><br><br>
+    <button onclick="tinhLaiNganHang()">Tính lãi</button>
+    <p id="interestResult"></p>
+    <script>
+        function tinhLaiNganHang() {
+            let P = parseFloat(document.getElementById('initialAmount').value); // Số tiền ban đầu
+            let r = parseFloat(document.getElementById('interestRate').value) / 100; // Lãi suất hàng tháng
+            let n = parseInt(document.getElementById('months').value); // Số tháng cho vay
+            if (isNaN(P) || isNaN(r) || isNaN(n) || P <= 0 || r < 0 || n <= 0) {
+                document.getElementById('interestResult').innerText = "Vui lòng nhập đúng giá trị.";
+                return;
+            }
+            let A = P * Math.pow(1 + r, n);
+            let tienLai = A - P;
+            document.getElementById('interestResult').innerText =
+                "Số tiền cuối cùng là: " + A.toFixed(2) + " VND\n" +
+                "Tổng tiền lãi là: " + tienLai.toFixed(2) + " VND";
+        }
+    </script> -->
+
+
+    <h1>Bài 6: In hình trái tim</h1>
+    <button onclick="inHinhTraiTim()">In Hình Trái Tim</button>
+    <pre id="result"></pre>
+    <script>
+        function inHinhTraiTim() {
+            let result = '';
+            let size = 6;
+            for (let i = 0; i <= size; i++) {
+                for (let j = 0; j <= 4 * size; j++) {
+                    let d1 = (i - size) * (i - size) + (j - size) * (j - size) <= size * size;
+                    let d2 = (i - size) * (i - size) + (j - 3 * size) * (j - 3 * size) <= size * size;
+                    if (d1 || d2) {
+                        result += '*';
+                    } else {
+                        result += ' ';
+                    }
+                }
+                result += '\n';
+            }
+            for (let i = 1; i <= 2 * size; i++) {
+                for (let j = 0; j < i; j++) {
+                    result += ' ';
+                }
+                for (let k = 0; k < 4 * size + 1 - 2 * i; k++) {
+                    result += '*';
+                }
+                result += '\n';
+            }
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+</body>
+</html>
