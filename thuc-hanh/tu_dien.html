@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Từ điển Anh - Việt</h1>
+<form id="dictionaryForm">
+    <label for="word">Nhập từ tiếng Anh:</label>
+    <input type="text" id="word" required>
+    <button type="submit">Dịch</button>
+</form>
+<p id="result"></p>
+<script>
+    const englishWords = ["apple", "banana", "cat", "dog", "elephant"];
+    const vietnameseWords = ["quả táo", "quả chuối", "con mèo", "con chó", "con voi"];
+    const form = document.getElementById('dictionaryForm');
+    const resultElement = document.getElementById('result');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const inputWord = document.getElementById('word').value.toLowerCase();
+        const index = englishWords.indexOf(inputWord);
+        if (index !== -1) {
+            resultElement.textContent = `Từ tiếng Việt: ${vietnameseWords[index]}`;
+        } else {
+            resultElement.textContent = "Không tìm thấy từ này trong từ điển.";
+        }
+    });
+</script>
+</body>
+</html>
