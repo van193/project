@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- <h1>Bài 1: Tạo hàm alertMessage()</h1>
+<button onclick="alertMessage()">Click</button>
+<script>
+    function alertMessage() {
+        alert("Xin chào.");
+    }
+</script> -->
+
+
+<!-- <h1>Bài 2: Tạo hàm nhận một đối số và tăng giá trị</h1>
+<button onclick="displayResult()">Click</button>
+<p id="result"></p>
+<script>
+    function increaseValue(num) {
+        return num + 1;
+    }
+    function displayResult() {
+        const value = 5;
+        const result = increaseValue(value);
+        document.getElementById("result").innerHTML = "Kết quả: " + result;
+    }
+</script> -->
+
+<!-- <h1>Bài 3: Tạo hàm nhận vào hai tham số</h1>
+<button onclick="displaySum()">Click</button>
+<p id="sumResult"></p>
+<script>
+    function compareValues(a, b) {
+        if (a > b) {
+            alert("Giá trị của tham số thứ nhất lớn hơn tham số thứ hai.");
+        } else {
+            return a + b;
+        }
+    }
+
+    function displaySum() {
+        const value1 = 10;
+        const value2 = 5;
+        const result = compareValues(value1, value2);
+        if (result !== undefined) {
+            document.getElementById("sumResult").innerText = "Tổng của hai tham số: " + result;
+        }
+    }
+</script> -->
+
+
+<!-- <h1>Bài 4: Thêm các hàm alert() vào mã</h1>
+<button onclick="displayResult()">Click</button>
+<p id="resultDisplay"></p>
+<script>
+    function addNumbers() {
+        let firstNum = 4;
+        let secondNum = 8;
+        let result = firstNum + secondNum;
+        return result;
+    }
+
+    function displayResult() {
+        let result = 0;
+        alert("Giá trị của result trước khi gọi hàm: " + result); // Hiển thị giá trị trước khi gọi hàm
+        result = addNumbers();
+        alert("Giá trị của result sau khi gọi hàm: " + result); // Hiển thị giá trị sau khi gọi hàm
+        document.getElementById("resultDisplay").innerText = "Kết quả: " + result;
+    }
+
+</script> -->
+
+
+<h1>Bài 5: Tạo một mảng với bảy phần tử dạng chuỗi có giá trị là tên các ngôi sao</h1>
+<button onclick="alertMessage()">Click</button>
+<script>
+    let star1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let star2 = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function check_star(star) {
+        // Tìm kiếm ngôi sao trong mảng star1
+        for (let i = 0; i < star1.length; i++) {
+            if (star === star1[i]) {
+                // Nếu tìm thấy, trả về chòm sao tương ứng từ star2
+                return star2[i];
+            }
+        }
+        // Nếu không tìm thấy ngôi sao, trả về thông báo không tìm thấy
+        return "Không tìm thấy chòm sao cho ngôi sao này.";
+    }
+
+    let star = prompt("Nhập vào tên ngôi sao: "); // Hộp thoại nhập ngôi sao
+    let result = check_star(star); // Gọi hàm kiểm tra ngôi sao
+    document.write(result); // Hiển thị kết quả trên màn hình
+</script>
+</body>
+</html>
