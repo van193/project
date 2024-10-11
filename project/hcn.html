@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<canvas id="rectangleCanvas" width="400" height="400"></canvas>
+<p>Diện tích: <span id="area"></span></p>
+<p>Chu vi: <span id="perimeter"></span></p>
+
+<script>
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        // Tính diện tích
+        getArea() {
+            return this.width * this.height;
+        }
+
+        // Tính chu vi
+        getPerimeter() {
+            return 2 * (this.width + this.height);
+        }
+
+        // Vẽ hình chữ nhật lên canvas
+        drawRectangle() {
+            const canvas = document.getElementById('rectangleCanvas');
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Xóa canvas trước khi vẽ
+            ctx.fillStyle = 'lightblue'; // Màu sắc của hình chữ nhật
+            ctx.fillRect(50, 50, this.width, this.height); // Vẽ hình chữ nhật
+        }
+    }
+
+    // Khởi tạo một đối tượng hình chữ nhật
+    let myRectangle = new Rectangle(150, 100);
+
+    // Hiển thị hình chữ nhật trên canvas
+    myRectangle.drawRectangle();
+
+    // Hiển thị diện tích và chu vi
+    document.getElementById('area').textContent = myRectangle.getArea();
+    document.getElementById('perimeter').textContent = myRectangle.getPerimeter();
+
+    setTimeout(() => {
+        myRectangle.width = 200;
+        myRectangle.height = 120;
+
+        myRectangle.drawRectangle();
+
+        document.getElementById('area').textContent = myRectangle.getArea();
+        document.getElementById('perimeter').textContent = myRectangle.getPerimeter();
+    }, 3000);
+</script>
+</body>
+</html>
